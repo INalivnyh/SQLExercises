@@ -1,0 +1,29 @@
+1. Update
+
+-- change category name
+UPDATE category SET name = 'Ãîëîâíûå óáîðû' WHERE id = 5;
+
+-- check update
+SELECT * FROM category;
+
+-- change discount where discount = 0
+-- UPDATE category SET discount = 3 WHERE discount = 0 -- bad idea
+UPDATE category SET discount = 3 WHERE id IN (2, 5);
+
+2. Delete
+
+-- delete row from table category
+DELETE FROM category WHERE id = 5;
+
+3. Homework
+
+-- to fill alias_name for categorias, where this field is empty
+UPDATE category set alias_name = 'women''s clothing' WHERE id = 1;
+UPDATE category set alias_name = 'man''s clothing' WHERE id = 2;
+UPDATE category set alias_name = 'women''s shoes' WHERE id = 3;
+
+-- to add new brand «Aunt Klava Company»
+INSERT INTO brand (name) VALUES ('Aunt Klava Company');
+
+-- delete this brand
+DELETE FROM brand WHERE id = 4;
